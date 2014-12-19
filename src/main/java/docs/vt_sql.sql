@@ -1,0 +1,18 @@
+create database personelbilgi;
+
+create table KISI
+(
+	id int(10) auto_increment,
+	ad varchar(20) not null,
+	soyad varchar(20) not null,
+	primary key(id)
+);
+
+create table TELEFON
+(
+	id int(10) auto_increment,
+	tel_no varchar(20),
+	kisi_id int(10),
+	primary key(id),
+	constraint FK_TEL_KISIID_KISI_ID foreign key(kisi_id) references kisi(id)
+);
