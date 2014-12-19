@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+          
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Personel Telefon Bilgileri</title>
@@ -9,15 +10,16 @@
     <h:body>
         <center>
             <h:form>
+                <p:outputLabel value="Telefon Ekleme Sayfası" />
                 <p:panelGrid columns="2">
                     <p:outputLabel value="Ad : "/>
-                    <p:inputText value="" />
+                    <p:inputText value="#{kayitBean.kisi.ad}" />
                     <p:outputLabel value="Soyad : "/>
-                    <p:inputText value="" />
+                    <p:inputText value="#{kayitBean.kisi.soyad}" />
                     <p:outputLabel value="Cep Tel : "/>
-                    <p:inputText value="" />
+                    <p:inputText value="#{kayitBean.cepTel.telNo}" />
                     <p:outputLabel value="Ev Tel : "/>
-                    <p:inputText value="" />
+                    <p:inputText value="#{kayitBean.evTel.telNo}" />
                     <p:commandButton value="Kaydet" />                    
                 </p:panelGrid>
             </h:form>
