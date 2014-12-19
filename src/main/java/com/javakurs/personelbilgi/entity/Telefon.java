@@ -32,6 +32,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Telefon.findById", query = "SELECT t FROM Telefon t WHERE t.id = :id"),
     @NamedQuery(name = "Telefon.findByTelNo", query = "SELECT t FROM Telefon t WHERE t.telNo = :telNo")})
 public class Telefon implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,7 +44,7 @@ public class Telefon implements Serializable {
     private String telNo;
     @JoinColumn(name = "kisi_id", referencedColumnName = "id")
     @ManyToOne
-    private Kisi kisiId;
+    private Kisi kisi;
 
     public Telefon() {
     }
@@ -68,12 +69,12 @@ public class Telefon implements Serializable {
         this.telNo = telNo;
     }
 
-    public Kisi getKisiId() {
-        return kisiId;
+    public Kisi getKisi() {
+        return kisi;
     }
 
-    public void setKisiId(Kisi kisiId) {
-        this.kisiId = kisiId;
+    public void setKisi(Kisi kisi) {
+        this.kisi = kisi;
     }
 
     @Override
@@ -100,5 +101,5 @@ public class Telefon implements Serializable {
     public String toString() {
         return "com.javakurs.personelbilgi.entity.Telefon[ id=" + id + " ]";
     }
-    
+
 }
