@@ -1,5 +1,8 @@
 package com.javakurs.personelbilgi.service;
 
+import com.javakurs.personelbilgi.entity.Kisi;
+import com.javakurs.personelbilgi.facade.KisiFacade;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 /**
@@ -9,6 +12,10 @@ import javax.ejb.Stateless;
 @Stateless
 public class KisiService {
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+    @EJB
+    private KisiFacade kisiFacade;
+
+    public void ekle(Kisi pKisi) {
+        kisiFacade.create(pKisi);
+    }
 }
