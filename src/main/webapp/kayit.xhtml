@@ -10,7 +10,8 @@
     <h:body>
         <center>
             <h:form>
-                <p:outputLabel value="Telefon Ekleme Sayfası" style="font-size: 16px;"/>
+                <p:outputLabel value="Telefon Ekleme Sayfası" style="font-size: 16px; font-family: sans-serif; color: red;"/>
+                <br/>
                 <p:panelGrid columns="2">
                     <p:outputLabel value="Ad : "/>
                     <p:inputText value="#{kayitBean.kisi.ad}" />
@@ -20,8 +21,11 @@
                     <p:inputText value="#{kayitBean.cepTel.telNo}" />
                     <p:outputLabel value="Ev Tel : "/>
                     <p:inputText value="#{kayitBean.evTel.telNo}" />
-                    <p:commandButton value="Kaydet" action="#{kayitBean.ekle}" />                    
+                    <p:commandButton value="Kaydet" action="#{kayitBean.ekle}" update="@form"/>   
+                    <p:outputLabel value="#{kayitBean.message}"/>
                 </p:panelGrid>
+                <br/>
+                <br/>                
             </h:form>
         </center>
     </h:body>

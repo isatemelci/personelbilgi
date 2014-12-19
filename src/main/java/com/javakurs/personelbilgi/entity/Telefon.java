@@ -7,6 +7,7 @@ package com.javakurs.personelbilgi.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author dream
  */
 @Entity
-@Table(catalog = "personelbilgi", schema = "")
+@Table(catalog = "personelbilgi", name = "telefon")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Telefon.findAll", query = "SELECT t FROM Telefon t"),
