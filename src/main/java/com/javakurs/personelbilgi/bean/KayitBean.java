@@ -92,5 +92,4 @@ public class KayitBean {
     public void setMessage(String message) {
         this.message = message;
     }
-
 }

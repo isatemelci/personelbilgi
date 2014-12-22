@@ -71,21 +71,21 @@ public class Kisi implements Serializable {
         this.soyad = soyad;
     }
 
-    @PrePersist
-    public void prePersistKisi() {
-        
-        for (Telefon telefon : telefonList) {
-            telefon.setKisi(this);
-        }
-    }
-    
-    @PreUpdate
-    public void preUpdateKisi() {
-        
-        for (Telefon telefon : telefonList) {
-            telefon.setKisi(this);
-        }
-    }
+//    @PrePersist
+//    public void prePersistKisi() {
+//        
+//        for (Telefon telefon : telefonList) {
+//            telefon.setKisi(this);
+//        }
+//    }
+//    
+//    @PreUpdate
+//    public void preUpdateKisi() {
+//        
+//        for (Telefon telefon : telefonList) {
+//            telefon.setKisi(this);
+//        }
+//    }
 
     public Integer getId() {
         return id;
